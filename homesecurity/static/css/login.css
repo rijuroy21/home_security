@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.login-title {
+    color: #24639d;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #24639d;
+    outline: none;
+}
+
+.login-form input[type="submit"] {
+    background-color: #24639d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #1e527d;
+    transform: scale(1.02);
+}
+
+.login-links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-links a {
+    color: #24639d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.login-links a:hover {
+    color: #ffffff;
+    background-color: #24639d;
+}
+
+.login-extra {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.login-extra a {
+    color: #24639d;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.login-extra a:hover {
+    color: #ffffff;
+    background-color: #1e527d;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-container {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    .login-form input,
+    .login-form input[type="submit"] {
+        font-size: 1rem;
+    }
+}

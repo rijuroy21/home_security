@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="{% static 'css/privacy.css' %}">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/">VAULT GUARD</a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="{% url 'user_orders' %}">My Orders</a>
+            <a href="{% url 'view_cart' %}">Cart</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p> Home Security Products</p>
+        <p> 123 Main Street, City, Country</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We collect personal information such as name, email, phone number, and address when you register, place an
+            order, or subscribe to our newsletter.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use your information to process orders, improve our services, and send promotional offers.</p>
+
+        <h2>3. Cookies</h2>
+        <p>We use cookies to enhance your browsing experience. You can disable cookies in your browser settings.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We may share your information with third-party services for payment processing and shipping purposes.</p>
+
+        <h2>5. Data Security</h2>
+        <p>We take appropriate measures to protect your personal information from unauthorized access or disclosure.</p>
+
+        <h2>6. Your Rights</h2>
+        <p>You can request to access, modify, or delete your personal data by contacting us.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at
+            <strong>support@example.com</strong>.</p>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your trusted source for top-of-the-line home security products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@homesecurity.com</p>
+                <p>Phone: 1-800-123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/homesecurity">Facebook</a></li>
+                    <li><a href="https://twitter.com/homesecurity">Twitter</a></li>
+                    <li><a href="https://instagram.com/homesecurity">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/homesecurity">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HomeSecurity.com | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/">VAULT GUARD</a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="{% url 'user_orders' %}">My Orders</a>
+            <a href="{% url 'view_cart' %}">Cart</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <p><strong>Company Name:</strong> Home Security Products</p>
+            <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+            <p><strong>Email:</strong> support@example.com</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your trusted source for top-of-the-line home security products.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@homesecurity.com</p>
+                <p>Phone: 1-800-123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://facebook.com/homesecurity">Facebook</a></li>
+                    <li><a href="https://twitter.com/homesecurity">Twitter</a></li>
+                    <li><a href="https://instagram.com/homesecurity">Instagram</a></li>
+                    <li><a href="https://linkedin.com/company/homesecurity">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HomeSecurity.com | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

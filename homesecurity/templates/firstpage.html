@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VaultGuard</title>
+    <link rel="stylesheet" href="{% static 'css/firstpage.css' %}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="brand">VAULTGUARD</h2>
+    <nav class="sidebar-nav">
+        <a href="{% url 'firstpage' %}"> Home</a>
+        <a href="{% url 'add_product' %}"> Add Product</a>
+        <a href="{% url 'user_list' %}"> User List</a>
+        <a href="{% url 'logout' %}"> Logout</a>
+    </nav>
+</div>
+
+<div class="main-content">
+    <section class="section-title">Product List</section>
+    <div class="product-list">
+        {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <div class="card-info">
+                <h3>{{ product.name }}</h3>
+                <p><del>₹{{ product.price }}</del> <strong>₹{{ product.offerprice }}</strong></p>
+                <div class="card-actions">
+                    <a href="{% url 'edit_g' product.id %}" class="btn btn-blue">Edit</a>
+                    <a href="{% url 'delete_g' product.id %}" class="btn btn-red">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

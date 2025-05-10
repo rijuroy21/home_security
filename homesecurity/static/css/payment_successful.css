@@ -1,0 +1,21 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox to ensure the footer is pushed to the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content section should expand to fill remaining space */
+.container {
+    flex-grow: 1;
+}
+
+/* Footer will stay at the bottom */
+footer {
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}

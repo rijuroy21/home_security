@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel="stylesheet" href="{% static 'css/firstpage.css' %}">
+</head>
+<body>
+<div class="sidebar">
+    <h2 class="brand">VAULTGUARD</h2>
+    <nav class="sidebar-nav">
+        <a href="{% url 'firstpage' %}">Home</a>
+        <a href="{% url 'add_product' %}">Add Product</a>
+        <a href="{% url 'user_list' %}">User List</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+</div>
+
+<div class="main-content">
+    <section class="section-title">User List</section>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Date Joined</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{% url 'user_detail' user.id %}">{{ user.username }}</a></td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.date_joined|date:"Y-m-d" }}</td>
+                <td>
+                    <a href="{% url 'delete_user' user.id %}" class="btn btn-red" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="4">No users found.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #1a1a2e;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.sidebar .brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: #0f3460;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 2rem;
+  flex: 1;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-info p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.card-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+  display: inline-block;
+}
+
+.btn-blue {
+  background-color: #007bff;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3;
+}
+
+.btn-red {
+  background-color: #dc3545;
+}
+
+.btn-red:hover {
+  background-color: #c82333;
+}

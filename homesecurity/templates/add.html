@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if data1 %}Edit{% else %}Add{% endif %} Product - VaultGuard</title>
+    <link rel="stylesheet" href="{% static 'css/firstpage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="brand">VAULTGUARD</h2>
+    <nav class="sidebar-nav">
+        <a href="{% url 'firstpage' %}">Home</a>
+        <a href="{% url 'add_product' %}">Add Product</a>
+        <a href="{% url 'user_list' %}"> User List</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+</div>
+
+<div class="main-content">
+    <div class="product-form-wrapper">
+        <h2>{% if data1 %}Edit{% else %}Add{% endif %} Product</h2>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <form action="{% if data1 %}{% url 'edit_g' data1.id %}{% else %}{% url 'add_product' %}{% endif %}" method="post" enctype="multipart/form-data" class="product-form">
+            {% csrf_token %}
+
+            <div class="form-section">
+                <h3>Upload Image</h3>
+                <label for="image">Main Image:</label>
+                <input type="file" name="image" id="image" accept="image/*" {% if not data1 %}required{% endif %}>
+            </div>
+
+            <div class="form-section">
+                <h3>Product Details</h3>
+
+                <label for="name">Product Name:</label>
+                <input type="text" name="name" value="{{ data1.name|default:'' }}" required>
+
+                <label for="price">Price:</label>
+                <input type="number" name="price" step="0.01" value="{{ data1.price|default:'' }}" required>
+
+                <label for="offerprice">Offer Price:</label>
+                <input type="number" name="offerprice" step="0.01" value="{{ data1.offerprice|default:'' }}">
+
+
+                <label for="category">Category:</label>
+                <select name="category" required>
+                    <option value="Lighting" {% if data1.category == 'Lighting' %}selected{% endif %}>Lighting</option>
+                    <option value="Actuators" {% if data1.category == 'Actuators' %}selected{% endif %}>Actuators</option>
+                    <option value="Touch Switches" {% if data1.category == 'Touch Switches' %}selected{% endif %}>Touch Switches</option>
+                    <option value="Security" {% if data1.category == 'Security' %}selected{% endif %}>Security</option>
+                </select>
+
+                <label for="warranty">Warranty:</label>
+                <input type="text" name="warranty" value="{{ data1.warranty|default:'' }}">
+
+                <label for="description">Description:</label>
+                <textarea name="description" required>{{ data1.description|default:'' }}</textarea>
+
+                <label for="stock">Stock Quantity:</label>
+                <input type="number" name="stock" min="0" value="{{ data1.stock|default:'' }}" required>
+
+                <button type="submit" class="btn green">
+                    {% if data1 %}Save Changes{% else %}Save Product{% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

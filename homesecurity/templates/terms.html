@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>terms and Conditions</title>
+  <link rel="stylesheet" href="{% static 'css/terms.css' %}">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="/">VAULT GUARD</a>
+    </div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="{% url 'register' %}">Register</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'user_orders' %}">My Orders</a>
+      <a href="{% url 'view_cart' %}">Cart</a>
+      <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+  </header>
+  <h2>1. Use of the Website</h2>
+  <ul>
+    <li>You must be at least 18 years old to use this Website or make a purchase.</li>
+    <li>You agree to use the Website only for lawful purposes and in compliance with all applicable laws.</li>
+    <li>We reserve the right to refuse service, terminate accounts, or cancel orders at our discretion if we suspect any
+      fraudulent or unlawful activity.</li>
+  </ul>
+
+  <h2>2. Product Orders and Payments</h2>
+  <ul>
+    <li>By placing an order, you agree that you are authorized to use the payment method provided.</li>
+    <li>All orders are subject to availability, and we reserve the right to refuse or cancel any order at any time.</li>
+    <li>Prices are listed in INR and are subject to change without notice.</li>
+    <li>Payments must be completed at checkout. We accept credit/debit cards, UPI, net banking, and other secure payment
+      methods.</li>
+  </ul>
+
+  <h2>3. Shipping and Delivery</h2>
+  <ul>
+    <li>We offer shipping within India. Estimated delivery times are provided at checkout but are not guaranteed.</li>
+    <li>We are not responsible for delays caused by third-party carriers, natural disasters, or other unforeseen
+      circumstances.</li>
+    <li>Risk of loss and ownership of products pass to you upon delivery.</li>
+  </ul>
+
+  <h2>4. Returns and Refunds</h2>
+  <ul>
+    <li>We offer a 7-day return policy for eligible products. Products must be unused and in original packaging.</li>
+    <li>Customers must request a return authorization before returning any item.</li>
+    <li>Refunds will be issued to the original payment method within 7 business days after approval.</li>
+    <li>Shipping fees are non-refundable, and return shipping costs are the responsibility of the customer unless the
+      item is defective.</li>
+  </ul>
+
+  <h2>5. Warranty and Liability</h2>
+  <ul>
+    <li>Our products come with a limited warranty of 1 year. Please refer to our warranty policy for details.</li>
+    <li>We are not responsible for damages caused by improper installation, misuse, or unauthorized modifications.</li>
+    <li>To the fullest extent permitted by law, we disclaim all liability for indirect, incidental, or consequential
+      damages arising from the use of our products.</li>
+  </ul>
+
+  <h2>6. Privacy Policy</h2>
+  <ul>
+    <li>Your use of our Website is also governed by our Privacy Policy, which outlines how we collect, use, and protect
+      your personal information.</li>
+    <li>By using our Website, you consent to the collection and use of your data as described in our Privacy Policy.
+    </li>
+  </ul>
+
+  <h2>7. Intellectual Property</h2>
+  <ul>
+    <li>All content on this Website, including text, images, logos, and software, is the property of Home Security
+      Products and protected by copyright and trademark laws.</li>
+    <li>You may not copy, reproduce, distribute, or create derivative works without our prior written consent.</li>
+  </ul>
+
+  <h2>8. Dispute Resolution</h2>
+  <ul>
+    <li>Any disputes arising from these Terms and Conditions shall be resolved through arbitration in India.</li>
+    <li>You agree to waive your right to participate in a class action lawsuit against us.</li>
+  </ul>
+
+  <h2>9. Changes to Terms and Conditions</h2>
+  <ul>
+    <li>We reserve the right to update or modify these Terms and Conditions at any time.</li>
+    <li>Your continued use of the Website after changes are posted constitutes your acceptance of the revised Terms and
+      Conditions.</li>
+  </ul>
+
+  <h2>10. Contact Information</h2>
+  <p>For any questions or concerns regarding these Terms and Conditions, please contact us at:</p>
+  <p><strong>Home Security Products</strong><br>
+    Email: support@homesecurityproducts.com<br>
+    Phone: +91-XXXXXXXXXX<br>
+    Address: [Your Address]</p>
+
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>Your trusted source for top-of-the-line home security products.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+          <li><a href="/terms">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@homesecurity.com</p>
+        <p>Phone: 1-800-123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://facebook.com/homesecurity">Facebook</a></li>
+          <li><a href="https://twitter.com/homesecurity">Twitter</a></li>
+          <li><a href="https://instagram.com/homesecurity">Instagram</a></li>
+          <li><a href="https://linkedin.com/company/homesecurity">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HomeSecurity.com | All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>
